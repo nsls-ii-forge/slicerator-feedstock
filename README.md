@@ -7,7 +7,7 @@ Package license: BSD 3-Clause
 
 Feedstock license: BSD 3-Clause
 
-Summary: A lazy-loading, fancy-sliceable iterable.
+Summary: A lazy-loading, fancy-sliceable iterable
 
 
 
@@ -80,9 +80,4 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@caspervdw](https://github.com/caspervdw/)
-* [@danielballan](https://github.com/danielballan/)
-* [@ericdill](https://github.com/ericdill/)
-* [@licode](https://github.com/licode/)
-* [@tacaswell](https://github.com/tacaswell/)
 

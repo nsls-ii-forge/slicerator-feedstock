@@ -1,42 +1,34 @@
+{% set name = "slicerator" %}
 {% set version = "1.0.0" %}
+{% set sha256 = "047b10658527b9b12c9a0b9fc13f51e83c0620074db223e07e47b93b4cf1abae" %}
 
 package:
-    name: slicerator
-    version: {{ version }}
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-    fn: slicerator-v{{ version }}.tar.gz
-    url: https://github.com/soft-matter/slicerator/archive/v{{ version }}.tar.gz
-    sha256: 047b10658527b9b12c9a0b9fc13f51e83c0620074db223e07e47b93b4cf1abae
+  url: https://github.com/soft-matter/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-    number: 0
-    noarch: python
-    script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  noarch: python
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-    host:
-        - python
-        - pip
-
-    run:
-        - python
-        - six
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - six
 
 test:
-    imports:
-        - slicerator
+  imports:
+    - slicerator
 
 about:
-    home: http://github.com/soft-matter/slicerator
-    license: BSD 3-Clause
-    license_file: LICENSE
-    summary: 'A lazy-loading, fancy-sliceable iterable.'
-
-extra:
-    recipe-maintainers:
-        - danielballan
-        - ericdill
-        - licode
-        - tacaswell
-        - caspervdw
+  home: http://github.com/soft-matter/slicerator
+  license: BSD 3-Clause
+  license_file: LICENSE
+  summary: A lazy-loading, fancy-sliceable iterable
